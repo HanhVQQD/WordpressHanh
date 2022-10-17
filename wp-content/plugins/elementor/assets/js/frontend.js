@@ -1,4 +1,4 @@
-/*! elementor - v3.7.8 - 02-10-2022 */
+/*! elementor - v3.7.8 - 03-10-2022 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["frontend"],{
 
 /***/ "../assets/dev/js/frontend/documents-manager.js":
@@ -3096,7 +3096,7 @@ var anInstance = __webpack_require__(/*! ../internals/an-instance */ "../node_mo
 var inheritIfRequired = __webpack_require__(/*! ../internals/inherit-if-required */ "../node_modules/core-js/internals/inherit-if-required.js");
 var normalizeStringArgument = __webpack_require__(/*! ../internals/normalize-string-argument */ "../node_modules/core-js/internals/normalize-string-argument.js");
 var DOMExceptionConstants = __webpack_require__(/*! ../internals/dom-exception-constants */ "../node_modules/core-js/internals/dom-exception-constants.js");
-var clearErrorStack = __webpack_require__(/*! ../internals/clear-error-stack */ "../node_modules/core-js/internals/clear-error-stack.js");
+var clearErrorStack = __webpack_require__(/*! ../internals/error-stack-clear */ "../node_modules/core-js/internals/error-stack-clear.js");
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../node_modules/core-js/internals/descriptors.js");
 var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "../node_modules/core-js/internals/is-pure.js");
 
@@ -3122,7 +3122,7 @@ var DOMExceptionPrototype = $DOMException.prototype = NativeDOMException.prototy
 var ERROR_HAS_STACK = 'stack' in Error(DOM_EXCEPTION);
 var DOM_EXCEPTION_HAS_STACK = 'stack' in new NativeDOMException(1, 2);
 
-// eslint-disable-next-line es-x/no-object-getownpropertydescriptor -- safe
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var descriptor = NativeDOMException && DESCRIPTORS && Object.getOwnPropertyDescriptor(global, DOM_EXCEPTION);
 
 // Bun ~ 0.1.1 DOMException have incorrect descriptor and we can't redefine it

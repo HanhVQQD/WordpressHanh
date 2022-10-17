@@ -1,4 +1,4 @@
-/*! elementor - v3.7.8 - 02-10-2022 */
+/*! elementor - v3.7.8 - 03-10-2022 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["preloaded-modules"],{
 
 /***/ "../assets/dev/js/frontend/handlers/accordion.js":
@@ -82,7 +82,7 @@ exports["default"] = Alert;
 /*!*******************************************************!*\
   !*** ../assets/dev/js/frontend/handlers/base-tabs.js ***!
   \*******************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
@@ -91,8 +91,6 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
-
-__webpack_require__(/*! core-js/modules/es.array.includes.js */ "../node_modules/core-js/modules/es.array.includes.js");
 
 class baseTabs extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -765,7 +763,7 @@ exports["default"] = Toggle;
 /*!***************************************************!*\
   !*** ../assets/dev/js/frontend/handlers/video.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
@@ -774,8 +772,6 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
-
-__webpack_require__(/*! core-js/modules/es.array.includes.js */ "../node_modules/core-js/modules/es.array.includes.js");
 
 class Video extends elementorModules.frontend.handlers.Base {
   getDefaultSettings() {
@@ -1227,8 +1223,6 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
-
-__webpack_require__(/*! core-js/modules/es.array.includes.js */ "../node_modules/core-js/modules/es.array.includes.js");
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
 

@@ -1,4 +1,4 @@
-/*! elementor - v3.7.8 - 02-10-2022 */
+/*! elementor - v3.7.8 - 03-10-2022 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -303,7 +303,7 @@ function getSerialize(serializer, decycler) {
     };
 }
 function isImmutableDefault(value) {
-    return typeof value !== "object" || value === null || typeof value === "undefined" || Object.isFrozen(value);
+    return typeof value !== "object" || value == null || Object.isFrozen(value);
 }
 function trackForMutations(isImmutable, ignorePaths, obj) {
     var trackedProperties = trackProperties(isImmutable, ignorePaths, obj);
@@ -394,7 +394,7 @@ function createImmutableStateInvariantMiddleware(options) {
 // src/serializableStateInvariantMiddleware.ts
 function isPlain(val) {
     var type = typeof val;
-    return type === "undefined" || val === null || type === "string" || type === "boolean" || type === "number" || Array.isArray(val) || isPlainObject(val);
+    return val == null || type === "string" || type === "boolean" || type === "number" || Array.isArray(val) || isPlainObject(val);
 }
 function findNonSerializableValue(value, path, isSerializable, getEntries, ignoredPaths) {
     if (path === void 0) { path = ""; }
@@ -657,14 +657,14 @@ function createReducer(initialState, mapOrBuilderCallback, actionMatchers, defau
                 if ((0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraft)(previousState)) {
                     var draft = previousState;
                     var result = caseReducer(draft, action);
-                    if (typeof result === "undefined") {
+                    if (result === void 0) {
                         return previousState;
                     }
                     return result;
                 }
                 else if (!(0,immer__WEBPACK_IMPORTED_MODULE_2__.isDraftable)(previousState)) {
                     var result = caseReducer(previousState, action);
-                    if (typeof result === "undefined") {
+                    if (result === void 0) {
                         if (previousState === null) {
                             return previousState;
                         }
@@ -934,7 +934,7 @@ function createUnsortedStateAdapter(selectId) {
         if (didMutateEntities) {
             var didMutateIds = updates.filter(function (update) { return takeNewKey(newKeys, update, state); }).length > 0;
             if (didMutateIds) {
-                state.ids = state.ids.map(function (id) { return newKeys[id] || id; });
+                state.ids = Object.keys(state.entities);
             }
         }
     }
